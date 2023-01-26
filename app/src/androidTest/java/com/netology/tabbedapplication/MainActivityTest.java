@@ -40,11 +40,6 @@ public class MainActivityTest {
     public void mainActivityTest() {
         ViewInteraction tabView = onView(
                 allOf(withContentDescription("Tab 1"),
-//                        childAtPosition(
-//                                childAtPosition(
-//                                        withId(R.id.tabs),
-//                                        0),
-//                                0),
                         isDisplayed()));
         tabView.perform(click());
 
@@ -57,18 +52,11 @@ public class MainActivityTest {
 
         ViewInteraction textView2 = onView(
                 allOf(withId(R.id.section_label), withText("Page: 1"),
-//                        withParent(allOf(withId(R.id.constraintLayout),
-//                                withParent(withId(R.id.view_pager)))),
                         isDisplayed()));
         textView2.check(matches(withText("Page: 1")));
 
         ViewInteraction tabView2 = onView(
                 allOf(withContentDescription("Tab 2"),
-//                        childAtPosition(
-//                                childAtPosition(
-//                                        withId(R.id.tabs),
-//                                        0),
-//                                1),
                         isDisplayed()));
         tabView2.perform(click());
 
@@ -81,8 +69,6 @@ public class MainActivityTest {
 
         ViewInteraction textView5 = onView(
                 allOf(withId(R.id.section_label), withText("Page: 2"),
-//                        withParent(allOf(withId(R.id.constraintLayout),
-//                                withParent(withId(R.id.view_pager)))),
                         isDisplayed()));
         textView5.check(matches(withText("Page: 2")));
     }
